@@ -1,7 +1,7 @@
 HxEditor
 ========
 
-Simple Haxe Editor - Haxe, Ace &amp; NodeWebkit
+Simple Haxe Editor - Haxe, Ace, Grunt &amp; NodeWebkit
 
 
 http://old.haxe.org/com/ide
