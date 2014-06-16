@@ -15,11 +15,11 @@ Simple Haxe Editor - Haxe, Ace, Grunt &amp; NodeWebkit
  * https://github.com/clemos/haxe-sublime-bundle/blob/master/HaxeHelper.py#L21
 
 ### Libs
-https://github.com/Simn/haxeparser
-https://code.google.com/p/dynatree/
-http://wwwendt.de/tech/dynatree/doc/samples.html
+ * https://github.com/Simn/haxeparser
+ * https://code.google.com/p/dynatree/
+ * http://wwwendt.de/tech/dynatree/doc/samples.html
 
 
 ### Style
-http://kkga.github.io/spacegray/
-http://r2ds.deviantart.com/art/Brackets-Redesign-441532416
+ * http://kkga.github.io/spacegray/
+ * http://r2ds.deviantart.com/art/Brackets-Redesign-441532416
