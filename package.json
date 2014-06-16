@@ -1,0 +1,17 @@
+{
+  "name": "HxEditor",
+  "version": "0.0.1",
+  "description": "Haxe Editor",
+  "main": "",
+  "author": "Lucas Jones",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-concurrent": "^0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-haxe": "^0.1.12",
+    "grunt-notify": "^0.3.0",
+    "grunt-sass": "^0.12.1",
+    "grunt-shell": "~0.7.0"
+  }
+}

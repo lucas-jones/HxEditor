@@ -1,0 +1,11 @@
+{
+	"name": "hxeditor",
+	"main": "index.html",
+	"window":
+	{
+		"title": "HxEditor",
+		"toolbar": true,
+		"fullscreen": false,
+		"frame": true
+	}
+}

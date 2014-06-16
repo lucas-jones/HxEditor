@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>HxEditor</title>
+
+		<style type="text/css" media="screen">
+			#app
+			{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: flex;
+			}
+		
+		    #editor
+		    { 
+		        height: 100%;
+				width: 100%;
+		    }
+			
+			#tree
+			{
+				height: inherit;
+				width: 300px;
+				height: 100%;
+				
+			}
+			
+			#treething
+			{
+				height: 100%;
+			}
+			
+			#project
+			{
+				position: absolute;
+				left: 0px;
+				z-order: 999;
+			}
+		</style>
+
+		<!-- vendor/bootstrap -->
+		<link href="vendor/bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="vendor/bootstrap/css/flat-ui.css" rel="stylesheet" />
+		<link href="vendor/fancytree/skin-dark/ui.fancytree.css" rel="stylesheet" type="text/css">
+			
+		<!-- Application -->
+		<link href="styles/app.css" rel="stylesheet" >
+		
+			<!-- Bootstrap -->
+		<script src="vendor/bootstrap/js/jquery-1.8.3.min.js"></script>
+		<script src="vendor/bootstrap/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="vendor/bootstrap/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap-select.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap-switch.js"></script>
+		<script src="vendor/bootstrap/js/flatui-checkbox.js"></script>
+		<script src="vendor/bootstrap/js/flatui-radio.js"></script>
+		<script src="vendor/bootstrap/js/jquery.tagsinput.js"></script>
+		<script src="vendor/bootstrap/js/jquery.placeholder.js"></script>
+
+		<!-- Angular -->
+		<script src="vendor/angular/angular.js"></script>
+		<script src="vendor/angular/angular-config.js"></script>
+		
+		<!-- Fancytree -->
+		<script src="vendor/fancytree/jquery.fancytree-all.js" /></script>
+
+		
+		
+		 <script type="text/javascript">
+		$(function(){
+      // using default options
+      $("#tree").fancytree({source: [
+    {title: "Node 1", key: "1"},
+    {title: "Folder 2", key: "2", folder: true, children: [
+      {title: "Node 2.1", key: "3", myOwnAttr: "abc"},
+      {title: "Node 2.2", key: "4"}
+    ]}
+	  ]});
+    });
+		</script>
+
+		
+	</head>
+
+	<body>
+		
+		
+		<div id="app" >
+			<div id="tree"></div>		
+			<div id="editor" ></div>
+		</div>
+		  
+		<!-- Ace -->
+		<script src="vendor/ace/ace.js" type="text/javascript" charset="utf-8" /></script>
+		<script src="vendor/ace/ext-language_tools.js" /></script>
+		
+		<!-- Application -->
+		<script src="app.js"></script>
+		
+	</body>
+</html>

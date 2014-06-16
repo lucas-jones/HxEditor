@@ -1,0 +1,6 @@
+-main HxEditor
+-cp lib
+-cp src
+-lib nodehx
+-lib haxeparser
+-js bin/app.js
