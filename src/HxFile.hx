@@ -1,6 +1,5 @@
 package ;
 
-import byte.ByteData;
 import haxeparser.HaxeParser;
 import nodejs.fs.File;
 import parser.HxParser;
@@ -23,5 +22,7 @@ class HxFile
 		
 		this.fileContent = File.readFileSync(path, cast "utf8");
 		this.parser = new HxParser(name + ".hx", fileContent);
+		
+		
 	}
 }

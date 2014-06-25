@@ -1,32 +1,35 @@
 package parser;
 
+import haxeparser.Data.TypeDecl;
 import byte.ByteData;
-import haxe.io.BytesData;
-import nodejs.fs.File;
+import haxe.ds.StringMap.StringMap;
+import haxe.macro.Expr.Access;
+import haxe.macro.Expr.Field;
+import haxe.macro.Expr.Function;
+import haxeparser.Data.ClassFlag;
+import haxeparser.Data.Definition;
+import haxeparser.Data.TypeDef;
+import haxeparser.HaxeParser;
+import byte.ByteData;
+import haxeparser.Data.TypeDef;
+import haxeparser.HaxeParser;
 
 class HxParser
 {
+
 	
 	public function new(fileName:String, document:String) 
-	{
-		trace(fileName);
-		
+	{		
 		try
-		{
-			var ast = new haxeparser.HaxeParser(ByteData.ofString(document), fileName).parse();
+		{	
+			var ast = new HaxeParser(ByteData.ofString(document), fileName).parse();
+			
 			for (decl in ast.decls)
 			{
-				if (decl.getName() == "EClass")
+				if (Std.is(decl.decl, TypeDef.EClass))
 				{
-					trace(" - " + untyped decl[2].name);
-					
-					
-					for (test in Reflect.fields(untyped decl[2].data))
-					{
-						trace("   - " + untyped Reflect.field(decl[2].data, text).name);
-					}					
+					trace(decl.decl);
 				}
-				
 			}
 		}
 		catch (e:Dynamic)

@@ -8,7 +8,6 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-concurrent');    
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-node-webkit-builder');
 
     grunt.initConfig(
     {

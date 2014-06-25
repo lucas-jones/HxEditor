@@ -1,6 +1,7 @@
 -main HxEditor
 -cp lib
 -cp src
+-cp libs/haxeparser/src
+-cp libs/hxparse/src
 -lib nodehx
--lib haxeparser
 -js bin/app.js

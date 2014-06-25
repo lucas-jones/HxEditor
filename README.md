@@ -23,3 +23,7 @@ Simple Haxe Editor - Haxe, Ace, Grunt &amp; NodeWebkit
 ### Style
  * http://kkga.github.io/spacegray/
  * http://r2ds.deviantart.com/art/Brackets-Redesign-441532416
+
+
+Latest HaxeParser isn't haxelib
+haxelib git haxeparser https://github.com/Simn/haxeparser.git
