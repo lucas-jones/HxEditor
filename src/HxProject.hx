@@ -10,6 +10,8 @@ class HxProject
 	
 	public var projectFiles(default, null):Array<HxFile>;
 	
+	public var classes(default, null):Array<HxFile>;
+	
 	public function new(hxSettings:HxSettings)
 	{
 		this.hxSettings = hxSettings;
@@ -18,9 +20,8 @@ class HxProject
 		
 		projectFiles = files.map(function(file:String)
 		{
-			return new HxFile(file);
+			return new HxFile(hxSettings.projectLocation + "/" + file);
 		});
-		//fetchHxFiles(hxSettings.haxeLocation + "/std");
 	}
 }
 

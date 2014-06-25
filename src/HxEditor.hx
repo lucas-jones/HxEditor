@@ -11,7 +11,7 @@ import js.JQuery;
 import node.Glob;
 import node.Path;
 import nodejs.fs.File;
-import parser.HaxeParser;
+import parser.HxParser;
 
 class HxEditor
 {
@@ -41,7 +41,7 @@ class HxEditor
 			
 			children.sort(function(itemA, itemB):Int
 			{
-				return itemA.folder == true && itemB.folder == false ? 1 : 0;
+				return itemA.folder == true && itemB.folder == false ? 0 : 1;
 			});
 			
 			return { title: name, children: children, folder: true};
@@ -56,7 +56,7 @@ class HxEditor
 	
 	static function main() 
 	{
-		hxSettings = new HxSettings("E:/Projects/HaxeJump/Example.hxe");
+		hxSettings = new HxSettings("C:/Projects/phaser/Example.hxe");
 		hxProject = new HxProject(hxSettings);
 		
 		//buildFile = new HaxeBuildFile(File.readFileSync(haxeSettings.buildFile, cast "utf8"));
@@ -80,14 +80,19 @@ class HxEditor
 		*/
 		untyped new JQuery("#tree").fancytree( { dblclick: function(event, data)
 		{
-			trace(data);
-			File.readFile("example/src/Main.hx", cast "utf8", function(e, r):Void
+			var path = data.node.data.path;
+			
+			if (path != null)
 			{
-				editor.setValue(r);
-				document = editor.getSession().getDocument();
-			});
-//        data.node.toggleSelect();
-      }, source: treeSource } );
+				File.readFile(path, cast "utf8", function(e, r):Void
+				{
+					editor.setValue(r);
+					document = editor.getSession().getDocument();
+					
+					new HxParser("Dave.hx", r);
+				});
+			}
+		}, source: treeSource } );
 		
 		languageTools = Ace.require("ace/ext/language_tools");
 		editor.getSession().setMode("ace/mode/haxe");
@@ -96,11 +101,5 @@ class HxEditor
 		editor.setOptions({ enableBasicAutocompletion: true,  fontFamily: "Consolas", fontSize: "11pt" });
 		
 		languageTools.addCompleter(new HaxeCompleter());
-		
-		File.readFile("example/src/Main.hx", cast "utf8", function(e, r):Void
-		{
-			editor.setValue(r);
-			document = editor.getSession().getDocument();
-		});
 	}
 }

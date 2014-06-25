@@ -12,10 +12,9 @@ class HaxeCompleter
 	public function getCompletions(editor:Editor, session:EditSession, pos:Dynamic, prefix:Dynamic, callback:Dynamic):Void
 	{
 		var position = session.getDocument().positionToIndex(pos);
-		
+		/*
 		File.writeFile("example/src/Main.hx", session.getValue(), function(e) 
 		{
-			/*
 			var exec = ChildProcess.exec("haxe --cwd example build.hxml --display src/Main.hx@" + position, {}, function(a, b, c)
 			{
 				try
@@ -46,9 +45,7 @@ class HaxeCompleter
 					trace("Error " + e);
 				}
 			});
-			*/
-			
-			
 		});
+		*/
 	}
 }
