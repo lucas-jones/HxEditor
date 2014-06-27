@@ -12,6 +12,8 @@ import node.Glob;
 import node.Path;
 import nodejs.fs.File;
 import parser.HxParser;
+import views.ExampleViewController;
+import views.angular.AngularHelper;
 
 class HxEditor
 {
@@ -54,8 +56,13 @@ class HxEditor
 		
 	}
 	
+	static var angular:AngularHelper;
+	
 	static function main() 
 	{
+		angular = new AngularHelper("HxEditor");
+		angular.addViewController("ExampleViewController", new ExampleViewController());
+		
 		hxSettings = new HxSettings("C:/Projects/phaser/Example.hxe");
 		hxProject = new HxProject(hxSettings);
 		

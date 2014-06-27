@@ -66,31 +66,15 @@
 		
 		<!-- Fancytree -->
 		<script src="vendor/fancytree/jquery.fancytree-all.js" /></script>
-
-		
-		
-		 <script type="text/javascript">
-		$(function(){
-      // using default options
-      $("#tree").fancytree({source: [
-    {title: "Node 1", key: "1"},
-    {title: "Folder 2", key: "2", folder: true, children: [
-      {title: "Node 2.1", key: "3", myOwnAttr: "abc"},
-      {title: "Node 2.2", key: "4"}
-    ]}
-	  ]});
-    });
-		</script>
-
-		
 	</head>
 
 	<body>
 		
 		
-		<div id="app" >
+		<div id="app" ng-app="HxEditor" >
 			<div id="tree"></div>		
 			<div id="editor" ></div>
+			<div ng-controller="ExampleViewController" ng-show="isOpen" >Hello {{name}}</div>
 		</div>
 		  
 		<!-- Ace -->

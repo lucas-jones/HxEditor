@@ -1,17 +1,14 @@
 package parser;
 
-import haxeparser.Data.TypeDecl;
-import byte.ByteData;
+//import haxeparser.Data.TypeDecl;
 import haxe.ds.StringMap.StringMap;
 import haxe.macro.Expr.Access;
 import haxe.macro.Expr.Field;
 import haxe.macro.Expr.Function;
-import haxeparser.Data.ClassFlag;
-import haxeparser.Data.Definition;
 import haxeparser.Data.TypeDef;
+
 import haxeparser.HaxeParser;
 import byte.ByteData;
-import haxeparser.Data.TypeDef;
 import haxeparser.HaxeParser;
 
 class HxParser
