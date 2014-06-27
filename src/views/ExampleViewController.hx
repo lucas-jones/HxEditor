@@ -13,6 +13,9 @@ class ExampleViewController extends AngularViewController
 	{
 		super.create(scope, element);
 		
+		// Setup
+		scope.parent = Reflect.field(scope, "$parent");
+		
 		scope.name = "Dave";
 	}
 }
